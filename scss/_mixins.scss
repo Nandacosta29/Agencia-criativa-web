@@ -1,0 +1,17 @@
+@mixin section-box() {
+  background-color: variaveis.$white; 
+  border-radius: $radius;
+  box-shadow: $shadow;
+  transition: transform $transition;
+}
+
+@mixin button-style {
+  padding: 0.9rem;
+  background-color: $primary;
+  color: $white;
+  border: none;
+  border-radius: $radius;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color $transition;
+}

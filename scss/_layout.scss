@@ -1,0 +1,41 @@
+@use 'variaveis';
+
+.header {
+  background: linear-gradient(135deg, variaveis.$primary, variaveis.$accent);
+  color: variaveis.$white;
+  text-align: center;
+  padding: 4rem 1rem;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  box-shadow: variaveis.$shadow;
+
+  &__title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+  }
+
+  &__subtitle {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+  }
+}
+
+.nav {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  &__link {
+    color: variaveis.$white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color variaveis.$transition;
+
+    &:hover {
+      color: #ffeb3b;
+    }
+  }
+}
