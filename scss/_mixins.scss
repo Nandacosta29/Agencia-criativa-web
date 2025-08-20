@@ -1,17 +1,20 @@
-@mixin section-box() {
+@use 'variaveis';
+
+@mixin section-box {
   background-color: variaveis.$white; 
-  border-radius: $radius;
-  box-shadow: $shadow;
-  transition: transform $transition;
+  border-radius: variaveis.$radius;
+  box-shadow: variaveis.$shadow;
+  transition: transform variaveis.$transition;
 }
 
 @mixin button-style {
   padding: 0.9rem;
-  background-color: $primary;
-  color: $white;
+  background-color: variaveis.$primary;
+  color: variaveis.$white;
   border: none;
-  border-radius: $radius;
+  border-radius: variaveis.$radius;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color $transition;
+  transition: background-color variaveis.$transition;
 }
+

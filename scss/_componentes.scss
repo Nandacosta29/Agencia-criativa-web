@@ -1,10 +1,11 @@
 @use 'variaveis';
 @use 'mixins';
+@use 'sass:math';
 
 .section {
   @include mixins.section-box;
   margin: 3rem auto;
-  padding: 3rem 2rem;
+  padding: variaveis.$spacing;
   max-width: 1000px;
 
   &:hover {
@@ -13,58 +14,18 @@
 
   &__title {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: math.div(variaveis.$spacing, 2); // ✅ agora sem warning
     color: variaveis.$primary;
-  }
-}
-
-.servicos {
-  &__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-  }
-
-  &__item {
-    background-color: #eef3fd;
-    padding: 1.5rem;
-    border-radius: variaveis.$radius;
     text-align: center;
-    transition: transform variaveis.$transition, background-color variaveis.$transition;
 
-    &:hover {
-      transform: scale(1.05);
-      background-color: #dde9fb;
-    }
-  }
-}
-
-.depoimento {
-  font-style: italic;
-  color: variaveis.$light-text;
-  border-left: 4px solid variaveis.$primary;
-  padding-left: 1rem;
-  margin-bottom: 1rem;
-}
-
-.form {
-  display: grid;
-  gap: 1rem;
-  margin-top: 1rem;
-
-  &__input,
-  &__textarea {
-    padding: 0.8rem;
-    border: 1px solid #ccc;
-    border-radius: variaveis.$radius;
-    font-size: 1rem;
-  }
-
-  &__button {
-    @include mixins.button-style;
-
-    &:hover {
-      background-color: #005ce0;
+    &::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: variaveis.$primary;
+      margin: 0.5rem auto;
+      border-radius: 2px;
     }
   }
 }

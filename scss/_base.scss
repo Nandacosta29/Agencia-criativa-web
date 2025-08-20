@@ -7,9 +7,10 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: variaveis.$bg;
-  color: variaveis.$text;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, variaveis.$light-bg, variaveis.$white);
+  color: variaveis.$light-text;
   line-height: 1.6;
-  padding: 0 1rem;
+  scroll-behavior: smooth;
 }
+

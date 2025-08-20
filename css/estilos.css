@@ -1,12 +1,88 @@
-
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a   \2577 \a 2 \2502    background-color: $white;\a   \2502                      ^^^^^^\a   \2575 \a   scss/_mixins.scss 2:21      section-box()\a   scss/_componentes.scss 5:3  @use\a   scss/estilos.scss 5:1       root stylesheet";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #eef3fd, #ffffff);
+  color: #555;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+.header {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(120deg, #0066ff, #003399);
+  color: #ffffff;
+}
+
+.header__title {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+}
+
+.header__subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.nav {
+  margin-top: 1.5rem;
+}
+.nav__link {
+  margin: 0 1rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
+}
+.nav__link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #ffffff;
+  margin: auto;
+  transition: width 0.3s ease;
+}
+.nav__link:hover {
+  color: #ffe066;
+}
+.nav__link:hover::after {
+  width: 100%;
+}
+
+.section {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin: 3rem auto;
+  padding: 2rem;
+  max-width: 1000px;
+}
+.section:hover {
+  transform: translateY(-5px);
+}
+.section__title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #0066ff;
+  text-align: center;
+}
+.section__title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #0066ff;
+  margin: 0.5rem auto;
+  border-radius: 2px;
+}
+
+/*# sourceMappingURL=estilos.css.map */

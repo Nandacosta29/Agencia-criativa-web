@@ -1,41 +1,50 @@
 @use 'variaveis';
 
 .header {
-  background: linear-gradient(135deg, variaveis.$primary, variaveis.$accent);
-  color: variaveis.$white;
   text-align: center;
-  padding: 4rem 1rem;
-  border-bottom-left-radius: 100px;
-  border-bottom-right-radius: 100px;
-  box-shadow: variaveis.$shadow;
+  padding: 4rem 2rem;
+  background: linear-gradient(120deg, variaveis.$primary, variaveis.$primary-dark);
+  color: variaveis.$white;
+}
 
-  &__title {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    font-weight: 800;
-  }
+.header__title {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+}
 
-  &__subtitle {
-    font-size: 1.2rem;
-    color: #e0e0e0;
-  }
+.header__subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
 }
 
 .nav {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
+  margin-top: 1.5rem;
 
   &__link {
+    margin: 0 1rem;
     color: variaveis.$white;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: bold;
+    position: relative;
     transition: color variaveis.$transition;
 
+    &::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 3px;
+      background: variaveis.$white;
+      margin: auto;
+      transition: width variaveis.$transition;
+    }
+
     &:hover {
-      color: #ffeb3b;
+      color: #ffe066;
+    }
+
+    &:hover::after {
+      width: 100%;
     }
   }
 }
